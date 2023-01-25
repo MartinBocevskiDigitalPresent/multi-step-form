@@ -1,0 +1,13 @@
+[data-animation="fade-in"] {
+  animation: 0.75s linear 0s 1 fade-in;
+}
+
+// keyframes
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
