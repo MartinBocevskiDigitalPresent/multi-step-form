@@ -231,6 +231,10 @@
             font-weight: 500;
             color: $grey;
           }
+
+          .month-info {
+            color: $primary;
+          }
         }
 
         .active-type {
@@ -253,6 +257,11 @@
           font-size: 1.25rem;
           font-weight: 500;
           color: $grey;
+        }
+
+        .highlight {
+          color: $primary;
+          font-weight: 600;
         }
 
         label {

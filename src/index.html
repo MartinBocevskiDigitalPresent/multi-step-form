@@ -99,6 +99,7 @@
             </div>
 
             <div class="choose-type">
+              <input type="radio" name="plan" id="arcade" value="Arcade" class="plan"/>
               <label for="arcade" class="checkbox-input">
                 <figure>
                   <img src="./assets/icon-arcade.svg" alt="">
@@ -106,9 +107,10 @@
 
                 <h3>Arcade</h3>
                 <span>$9/mo</span>
+                <span class="month-info">2 months free</span>
               </label>
-              <input type="radio" name="plan" id="arcade" />
 
+              <input type="radio" name="plan" id="advanced" value="Advanced" class="plan"/>
               <label for="advanced" class="checkbox-input">
                 <figure>
                   <img src="./assets/icon-advanced.svg" alt="">
@@ -116,9 +118,10 @@
               
                 <h3>Advanced</h3>
                 <span>$12/mo</span>
+                <span class="month-info">2 months free</span>
               </label>
-              <input type="radio" name="plan" id="advanced" />
 
+              <input type="radio" name="plan" id="pro" value="Pro" class="plan"/>
               <label for="pro" class="checkbox-input">
                 <figure>
                   <img src="./assets/icon-pro.svg" alt="">
@@ -126,14 +129,14 @@
               
                 <h3>Pro</h3>
                 <span>$15/mo</span>
+                <span class="month-info">2 months free</span>
               </label>
-              <input type="radio" name="plan" id="pro" />
             </div>
 
             <div class="payment-type">
               <span>Monthly</span>
               <input type="checkbox" name="payment-type" id="payment-type">
-              <label for="payment-type"></label>
+              <label for="payment-type" class="payment-type-label"></label>
               <span>Yearly</span>
             </div>
 

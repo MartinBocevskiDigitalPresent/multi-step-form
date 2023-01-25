@@ -16,7 +16,7 @@ export const getMultiForm = () => {
             
             if(stepMarker[i].checked) {
                 for(let y=0; y <numberCircle.length; y++) {
-                    console.log(numberCircle[y]);
+                    // console.log(numberCircle[y]);
                     numberCircle[y].classList.remove('active');
                 }
                 numberCircle[i].classList.add('active');
@@ -98,4 +98,64 @@ export const getMultiForm = () => {
             stepMarker[0].checked = true;
         }
     })
+
+    const inputPlan = document.querySelectorAll('.plan');
+    // inputPlan[0].checked = true;
+    const planCard = document.querySelectorAll('.checkbox-input');
+    const typeOfPlanLabel = document.querySelector('.payment-type-label');
+    const typeOfPlanRadio = document.querySelector('#payment-type');
+    const highlight = document.querySelectorAll('.payment-type span');
+    highlight[0].classList.add('highlight');
+    const monthInfo = document.querySelectorAll('.month-info');
+    for(let month of monthInfo) {
+        month.style.display = "none";
+    }
+    let typeOfPlan = 'Monthly';
+
+    // console.log(inputPlan);
+    // console.log(inputPlan.length);
+    for(let z = 0; z < inputPlan.length; z++) {
+        // console.log(planCard[z]);
+        inputPlan[z].addEventListener('click', () => {
+            // console.log(inputPlan[z].checked);
+            if(inputPlan[z].checked) { 
+                // console.log('checked');
+                for(const plan of planCard) {
+                    plan.classList.remove('active-type');
+                }
+                planCard[z].classList.add('active-type');
+            } else if(!(inputPlan[z].checked)) {
+                // console.log('not checked');
+                planCard[z].classList.remove('active-type');
+            }
+        })
+    }
+    
+    typeOfPlanLabel.addEventListener('click', () => {
+        if(typeOfPlanRadio.checked) {
+            highlight[0].classList.add('highlight');
+            highlight[1].classList.remove('highlight');
+            for(let month of monthInfo) {
+                month.style.display = "none";
+            }       
+            typeOfPlan = 'Monthly';
+        } else if(!(typeOfPlanRadio.checked)) {
+            highlight[0].classList.remove('highlight');
+            highlight[1].classList.add('highlight');
+            for(let month of monthInfo) {
+                month.style.display = "block";
+            }
+            typeOfPlan = 'Yearly';
+        }
+        console.log(typeOfPlan);
+    })
+
+    function getValues(typeOfPlan) {
+
+
+        if(typeOfPlan == "Yearly") {
+            console.log('#');
+        }
+    }
+
 }
