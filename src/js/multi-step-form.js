@@ -2,18 +2,27 @@ export const getMultiForm = () => {
 
     const stepMarker = document.querySelectorAll('.steps input');
     const numberCircle = document.querySelectorAll('.number');
-    // numberCircle[0].classList.add('active');
-    // stepMarker[0].checked = true;
+    numberCircle[0].classList.add('active');
+    stepMarker[0].checked = true;
 
     for(let i = 0; i < stepMarker.length; i++) {
         stepMarker[i].addEventListener('click', () => {
 
-            if(stepMarker[i].checked) {
-                for(const number of numberCircle) {
-                    number.classList.remove('.active');
-                }
-                numberCircle[i].classList.add('active');
+            for(const single of form) {
+                single.style.top = "-1000px";
             }
+            form[i].style.top = "0";
+            // if(stepMarker[i].checked) {
+            //     for(const number of numberCircle) {
+            //         number.classList.remove('.active');
+            //     }
+            //     numberCircle[i].classList.add('active');
+            // } else {
+            //     for(const number of numberCircle) {
+            //         number.classList.remove('.active');
+            //     }
+            //     numberCircle[i].classList.add('active');
+            // }
         })
     }
 
@@ -30,6 +39,8 @@ export const getMultiForm = () => {
     const formThree = document.querySelector('#form-three');
     const formFour = document.querySelector('#form-four');
     
+    const form = document.querySelectorAll('.forms form');
+
     const next = document.querySelectorAll('.next');
     const back = document.querySelectorAll('.back');
 
@@ -53,19 +64,19 @@ export const getMultiForm = () => {
 
     backOne.addEventListener('click', () => {
 
-        formTwo.style.top = "1000px";
+        formTwo.style.top = "-1000px";
         formOne.style.top = "0";
     })    
 
     backTwo.addEventListener('click', () => {
 
-        formThree.style.top = "1000px";
+        formThree.style.top = "-1000px";
         formTwo.style.top = "0";
     })    
 
     backThree.addEventListener('click', () => {
 
-        formFour.style.top = "1000px";
+        formFour.style.top = "-1000px";
         formThree.style.top = "0";
     })    
 }
