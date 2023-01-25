@@ -302,7 +302,7 @@
     #form-three {
       top: 1000px;
       transition: .3s ease-in-out;
-      
+
       .check-add-ons {
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
@@ -410,10 +410,15 @@
               color: $primary;
             }
 
-            a {
+            button {
               text-decoration: underline;
               color: $grey;
               font-size: 1.25rem;
+              background: transparent;
+              border: none;
+              padding: 0;
+              width: fit-content;
+              cursor: pointer;
             }
           }
 
