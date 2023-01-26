@@ -65,6 +65,7 @@
         </div>
 
         <div class="forms">
+          <!-- FORM ONE -->
           <form id="form-one">
             <div class="heading">
               <h2>Personal Info</h2>
@@ -91,8 +92,8 @@
             </div>
           </form>
           
+          <!-- FORM TWO -->
           <form id="form-two">
-
             <div class="heading">
               <h2>Select your plan</h2>
               <p>You have the option of monthly or yearly billing</p>
@@ -106,7 +107,7 @@
                 </figure>
 
                 <h3>Arcade</h3>
-                <span>$9/mo</span>
+                <span class="planPrice"></span>
                 <span class="month-info">2 months free</span>
               </label>
 
@@ -117,7 +118,7 @@
                 </figure>
               
                 <h3>Advanced</h3>
-                <span>$12/mo</span>
+                <span class="planPrice"></span>
                 <span class="month-info">2 months free</span>
               </label>
 
@@ -128,7 +129,7 @@
                 </figure>
               
                 <h3>Pro</h3>
-                <span>$15/mo</span>
+                <span class="planPrice"></span>
                 <span class="month-info">2 months free</span>
               </label>
             </div>
@@ -146,56 +147,56 @@
             </div>
           </form>
           
+          <!-- FORM THREE -->
           <form id="form-three">
-            
             <div class="heading">
               <h2>Pick add-ons</h2>
               <p>Add-ons help enhance your gaming experience.</p>
             </div>
 
             <div class="check-add-ons">
-              <label for="online-service" class="single-type">
+              <label for="online-service" class="single-type-check">
                 <div class="box">
-                  <input type="checkbox" name="addons" id="online-service">
+                  <input type="checkbox" name="addons" id="online-service" class="checkAddon" value="Online service">
                 </div>
 
                 <div class="content">
                   <div class="text">
-                    <h3>Online service</h3>
+                    <h3 class="addon-headline">Online service</h3>
                     <span>Access to multiplayer games</span>
                   </div>
 
-                  <span class="price">+51/mo</span>
+                  <span class="addonPrice test"></span>
                 </div>
               </label>
               
-              <label for="online-service" class="single-type">
+              <label for="larger-storage" class="single-type-check">
                 <div class="box">
-                  <input type="checkbox" name="addons" id="online-service">
+                  <input type="checkbox" name="addons" id="larger-storage" class="checkAddon" value="Larger storage">
                 </div>
               
                 <div class="content">
                   <div class="text">
-                    <h3>Larger storage</h3>
+                    <h3 class="addon-headline">Larger storage</h3>
                     <span>Extra 1TB of cloud save</span>
                   </div>
               
-                  <span class="price">+52/mo</span>
+                  <span class="addonPrice"></span>
                 </div>
               </label>
 
-              <label for="online-service" class="single-type">
+              <label for="customizable-profile" class="single-type-check">
                 <div class="box">
-                  <input type="checkbox" name="addons" id="online-service">
+                  <input type="checkbox" name="addons" id="customizable-profile" class="checkAddon" value="Customizable profile">
                 </div>
               
                 <div class="content">
                   <div class="text">
-                    <h3>Customizable profile</h3>
+                    <h3 class="addon-headline">Customizable profile</h3>
                     <span>Custom theme on your profile</span>
                   </div>
               
-                  <span class="price">+52/mo</span>
+                  <span class="addonPrice"></span>
                 </div>
               </label>
             </div>
@@ -206,6 +207,7 @@
             </div>
           </form>
           
+          <!-- FORM FOUR -->
           <form id="form-four">
             <div class="heading">
               <h2>Finishing Up</h2>
@@ -215,23 +217,23 @@
             <div class="check-information">
               <div class="step-two">
                 <div class="text">
-                  <h3>Arcade (Monthly)</h3>
+                  <h3 class="selected-plan"></h3>
                   <button type="button" class="change">Change</button>
                 </div>
 
-                <div class="price">$9/mo</div>
+                <div class="selected-plan-price"></div>
               </div>
 
               <hr>
 
               <div class="step-three">
 
-                <div class="single-type">
+                <!-- <div class="single-type">
                   <div class="text">
-                    <h3>Online service</h3>
+                    <h3 class="selected-addon">Online service</h3>
                   </div>
 
-                  <div class="price">+$1/mo</div>
+                  <div class="selected-addon-price">+$1/mo</div>
                 </div>
 
                 <div class="single-type">
@@ -239,23 +241,35 @@
                     <h3>Larger storage</h3>
                   </div>
 
-                  <div class="price">+$2/mo</div>
-                </div>
+                  <div class="selected-addon-price">+$2/mo</div>
+                </div> -->
               
               </div>
 
             </div>
             <div class="total">
               <div class="text">
-                <h3>Total (per month)</h3>
+                <h3>Total <span class="total-type-of-plan"></span></h3>
               </div>
             
-              <div class="price">+$12/mo</div>
+              <div class="total-price">+$12/mo</div>
             </div>
             
             <div class="buttons">
               <button type="button" id="back-three" class="back">Go Back</button>
-              <button type="submit" id="confirm" class="confirm">Confirm</button>
+              <button type="button" id="confirm" class="confirm">Confirm</button>
+            </div>
+          </form>
+
+          <!-- FORM FIVE -->
+          <form id="form-five">
+            <div class="content">
+              <figure>
+                <img src="./assets/icon-thank-you.svg" alt="">
+              </figure>
+
+              <div class="headline">Thank You!</div>
+              <div class="description">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</div>
             </div>
           </form>
         </div>
