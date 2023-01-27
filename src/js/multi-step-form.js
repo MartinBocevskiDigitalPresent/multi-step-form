@@ -93,7 +93,7 @@ export const getMultiForm = () => {
         for(let x = 0; x < form.length; x++) {
             form[x].style.top = "-1000px";
         }
-        form[0].style.top = "0";
+        form[1].style.top = "0";
 
         if(form[0].style.top == "0") {
             for(const circle of numberCircle) {
